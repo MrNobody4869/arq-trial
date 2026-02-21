@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a2e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eaeaea;
+}
+
+.game-container {
+    background-color: #16213e;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e94560;
+    font-size: 2rem;
+}
+
+.game-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 140px;
+}
+
+.scoreboard {
+    background-color: #0f3460;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #1a1a2e;
+}
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.score-item:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.value {
+    color: #e94560;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.preview-section {
+    background-color: #0f3460;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #1a1a2e;
+}
+
+.preview-section .label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+#preview-canvas {
+    background-color: #1a1a2e;
+    border-radius: 4px;
+    display: block;
+}
+
+.controls {
+    background-color: #0f3460;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #1a1a2e;
+    font-size: 0.85rem;
+    color: #a0a0a0;
+}
+
+.controls p {
+    margin-bottom: 4px;
+}
+
+#game-canvas {
+    background-color: #0f3460;
+    border: 3px solid #e94560;
+    border-radius: 4px;
+    display: block;
+}
+
+.game-status {
+    text-align: center;
+    margin-top: 16px;
+    min-height: 24px;
+    font-size: 1.1rem;
+    color: #e94560;
+}
+
+#start-btn {
+    display: block;
+    margin: 16px auto 0;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #eaeaea;
+    background-color: #e94560;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    background-color: #ff6b6b;
+}
+
+#start-btn:disabled {
+    background-color: #4a4a4a;
+    cursor: not-allowed;
+}
