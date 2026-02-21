@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0d1117;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e6edf3;
+}
+
+.game-container {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.scoreboard {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 140px;
+}
+
+.scoreboard h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    color: #58a6ff;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #21262d;
+}
+
+.stat:last-of-type {
+    border-bottom: none;
+}
+
+.label {
+    color: #8b949e;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat span:last-child {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.preview-section {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #30363d;
+}
+
+.preview-section .label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#preview {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    display: block;
+}
+
+.game-wrapper {
+    padding: 8px;
+    background: #161b22;
+    border: 2px solid #30363d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#game {
+    display: block;
+    background: #0d1117;
+    border: 1px solid #21262d;
+}
+
+.controls-hint {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #8b949e;
+}
