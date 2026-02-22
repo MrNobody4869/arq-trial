@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --accent: #ff2d2d;
+  --accent-secondary: #ffdd00;
+  --border: #0a0a0a;
+  --muted: #666666;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-space-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Neo-brutalist shadow utility */
+.shadow-brutal {
+  box-shadow: 4px 4px 0px var(--border);
+}
+
+.shadow-brutal-lg {
+  box-shadow: 8px 8px 0px var(--border);
+}
+
+.shadow-brutal-accent {
+  box-shadow: 4px 4px 0px var(--accent);
+}
