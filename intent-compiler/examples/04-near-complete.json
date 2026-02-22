@@ -1,0 +1,20 @@
+{
+  "message": "Next.js with Tailwind CSS is a strong choice for this type of project. One last question: do you need a blog or writing section, or should we focus purely on the portfolio and contact functionality.",
+  "spec": {
+    "tech_preferences": [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "confidence": 70,
+    "open_questions": [
+      "Should the site include a blog or writing section?"
+    ]
+  },
+  "quick_replies": [
+    "No blog needed, just portfolio and contact",
+    "Yes, I want a simple blog section",
+    "Maybe later, skip it for now"
+  ],
+  "ready_to_build": false
+}

@@ -1,0 +1,17 @@
+{
+  "message": "I was not able to determine what you would like to build from that input. Could you describe the type of project you have in mind, such as a website, dashboard, or web application, and what its main purpose would be.",
+  "spec": {
+    "version": 1,
+    "confidence": 0,
+    "open_questions": [
+      "What type of project do you want to build?",
+      "What is the main purpose or goal of the project?"
+    ]
+  },
+  "quick_replies": [
+    "I want to build a website",
+    "I need a web application",
+    "Let me start over with more detail"
+  ],
+  "ready_to_build": false
+}

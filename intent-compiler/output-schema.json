@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://arq.dev/schemas/intent-compiler-output.json",
+  "title": "IntentCompiler Output",
+  "description": "Schema for the IntentCompiler response format. Every response must be a single JSON object conforming to this schema.",
+  "type": "object",
+  "required": ["message", "spec", "ready_to_build"],
+  "additionalProperties": false,
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "Conversational reply to the user. Plain text only — no markdown, no emojis, no exclamation marks.",
+      "minLength": 1
+    },
+    "spec": {
+      "$ref": "#/$defs/Spec"
+    },
+    "quick_replies": {
+      "type": "array",
+      "description": "2-3 suggested replies the user can pick from to continue the conversation.",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "maxItems": 3
+    },
+    "ready_to_build": {
+      "type": "boolean",
+      "description": "True only when spec.confidence >= 80 and spec.open_questions is empty."
+    }
+  },
+  "$defs": {
+    "Spec": {
+      "type": "object",
+      "description": "The extracted project specification. Only include fields that are new or changed in the current turn; the client merges incrementally.",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1,
+          "description": "Schema version. Always 1."
+        },
+        "project_type": {
+          "type": "string",
+          "description": "Category of the project, e.g. landing-page, dashboard, e-commerce, portfolio.",
+          "examples": [
+            "landing-page",
+            "dashboard",
+            "e-commerce",
+            "portfolio",
+            "blog",
+            "saas",
+            "documentation"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "description": "One-paragraph summary of the project.",
+          "minLength": 1
+        },
+        "features": {
+          "type": "array",
+          "description": "Each feature as a short phrase. Only include NEW features not mentioned in prior turns.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "tech_preferences": {
+          "type": "array",
+          "description": "User-stated technology preferences. Only include NEW preferences not mentioned in prior turns.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "description": "Budget, timeline, accessibility, or other constraints. Only include NEW constraints not mentioned in prior turns.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "open_questions": {
+          "type": "array",
+          "description": "Questions that still need answers before the spec is complete.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "description": "How complete the spec is, from 0 (nothing understood) to 100 (fully specified).",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

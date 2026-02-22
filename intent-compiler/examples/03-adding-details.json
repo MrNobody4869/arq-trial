@@ -1,0 +1,21 @@
+{
+  "message": "Neo-brutalist style with bold colors and thick borders noted. That gives a clear design direction. Do you have a preference for the technology stack, such as React with Next.js, or would you like a recommendation based on the project type.",
+  "spec": {
+    "features": [
+      "Neo-brutalist visual style with bold colors and thick borders",
+      "Dark mode support"
+    ],
+    "confidence": 50,
+    "open_questions": [
+      "Do you have any technology stack preferences?",
+      "Should the site include a blog or writing section?",
+      "Are there any accessibility or performance constraints?"
+    ]
+  },
+  "quick_replies": [
+    "Use Next.js with Tailwind CSS",
+    "I am open to recommendations",
+    "I prefer vanilla HTML and CSS"
+  ],
+  "ready_to_build": false
+}

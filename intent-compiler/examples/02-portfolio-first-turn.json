@@ -1,0 +1,28 @@
+{
+  "message": "A developer portfolio site is a great starting point. To make sure we capture everything correctly, what visual style are you aiming for. For example, are you looking for something minimal and clean, bold and colorful, or something else entirely.",
+  "spec": {
+    "version": 1,
+    "project_type": "portfolio",
+    "description": "A personal portfolio website for a software developer to showcase projects, skills, and professional experience.",
+    "features": [
+      "Hero section with headline and call-to-action",
+      "Projects gallery with descriptions and links",
+      "Skills or tech stack section",
+      "Contact form or contact links",
+      "Responsive design"
+    ],
+    "confidence": 30,
+    "open_questions": [
+      "What visual style or design direction do you prefer?",
+      "Do you have any technology preferences?",
+      "Should the site include a blog or writing section?",
+      "Are there any accessibility or performance constraints?"
+    ]
+  },
+  "quick_replies": [
+    "I want a neo-brutalist style",
+    "Clean and minimal, like a modern SaaS site",
+    "Dark theme with subtle animations"
+  ],
+  "ready_to_build": false
+}

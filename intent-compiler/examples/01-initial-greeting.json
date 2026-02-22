@@ -1,0 +1,17 @@
+{
+  "message": "Welcome to Arq. I help capture your project requirements before any code is written. Could you describe what you would like to build, including the type of project and who the intended audience is.",
+  "spec": {
+    "version": 1,
+    "confidence": 0,
+    "open_questions": [
+      "What type of project do you want to build?",
+      "Who is the target audience?"
+    ]
+  },
+  "quick_replies": [
+    "I want to build a portfolio website",
+    "I need a landing page for my startup",
+    "I want to build a dashboard"
+  ],
+  "ready_to_build": false
+}
