@@ -87,7 +87,19 @@ class MainWindow(QMainWindow):
         self.text_input.setPlaceholderText("Paste or type text here...")
         self.text_input.setMinimumHeight(180)
         self.text_input.setFont(QFont("Segoe UI", 11))
+        self.text_input.textChanged.connect(self._update_preview)
         layout.addWidget(self.text_input)
+
+        # Live preview (updates as user types)
+        self.preview_frame = QWidget()
+        preview_layout = QVBoxLayout(self.preview_frame)
+        preview_layout.setContentsMargins(0, 4, 0, 4)
+        self.preview_label = QLabel("Preview: —")
+        self.preview_label.setFont(QFont("Segoe UI", 9))
+        self.preview_label.setStyleSheet("color: #666;")
+        self.preview_label.setWordWrap(True)
+        preview_layout.addWidget(self.preview_label)
+        layout.addWidget(self.preview_frame)
 
         # Analyze button
         self.analyze_btn = QPushButton("Analyze")
@@ -115,6 +127,19 @@ class MainWindow(QMainWindow):
         self.score_display.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.score_display.setFont(QFont("Segoe UI", 10))
         layout.addWidget(self.score_display)
+
+    def _update_preview(self):
+        """Update live preview as user types."""
+        text = self.text_input.toPlainText().strip()
+        if not text:
+            self.preview_label.setText("Preview: —")
+            return
+        chars = len(text)
+        words = len(text.split())
+        excerpt = text[:100].replace("\n", " ")
+        if len(text) > 100:
+            excerpt += "…"
+        self.preview_label.setText(f"Preview: {chars} chars · {words} words — \"{excerpt}\"")
 
     def _on_analyze(self):
         text = self.text_input.toPlainText()
