@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0c0c;
+  --foreground: #e4e4e7;
+  --muted: #71717a;
+  --accent: #d4a574;
+  --accent-muted: #a67c52;
+  --border: #27272a;
+  --card: #18181b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@utility prose-invert {
+  --tw-prose-body: #a1a1aa;
+  --tw-prose-headings: #fafafa;
+  --tw-prose-links: #d4a574;
+}
