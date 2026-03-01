@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0f172a;
+  --background: #f8fafc;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --accent: #1e40af;
+}
+
+.dark {
+  --foreground: #f1f5f9;
+  --background: #0f172a;
+  --muted: #94a3b8;
+  --border: #334155;
+  --accent: #3b82f6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-50 transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24 max-w-7xl mx-auto;
+  }
+  .prose-custom {
+    @apply text-slate-600 dark:text-slate-300 leading-relaxed;
+  }
+}
